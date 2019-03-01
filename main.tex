@@ -34,25 +34,64 @@ We observed HD106906b on DDMMYY for two consecutive HST orbits as part of the va
 \section{Data Reductions}
 % include the figures here
 \subsection{Two Roll Differential Imaging}
+\begin{figure}
+  \centering
+  \plotone{figures/F127M_subtraction.PDF}
+  \caption{An Example of two roll differential imaging results}
+  \label{fig:2rdi}
+\end{figure}
 \subsection{Ramp Correction}
+Describe how ramp correction is done
 \subsection{Astrometry}
 
 \section{Results}
 \subsection{Image}
 \subsection{Light Curve}
+\begin{figure}
+  \centering
+  \plotone{figures/lightcurves.pdf}
+  \caption{The light curve for HD106906b in F127M, F139M, and F153M}
+  \label{fig:lightcurve}
+\end{figure}
+
 \subsection{Astrometry}
+
+
+\begin{figure}
+  \centering
+  \plottwo{figures/bckStarDeltaRADEC.pdf}{figures/bckStarSeparation.pdf}
+  \caption{Relative astrometry between HD106906b and a closeby background star. Left: The difference in right ascension and declination. Right: The separation as a function of time. Past observations of HD106906b are marked with squares with their references in the legend.}
+  \label{fig:astrometry:bck}
+\end{figure}
+We are particularly interested in the background star that is only 0\arcsec{}.87 away from HD106906b, because it is unreported in previous studies and could contaminate the photometric and spectroscopic observations of HD106906b. We calculated the differences in right ascension ($\Delta$RA) and declination ($\Delta$DEC) and the separations between HD106906b and the background star from year 2003 (one year before the first direct imaging record of HD106906b ) to year 2023. In this calculation, the background star is assumed to be stationary and HD106906b is co-moving with its host star at $(\mu_\alpha\cos\delta=-39.01 \mbox{mas/yr}, \mu_{\delta}=-12.87 \mbox{mas/yr})$ \citep{Gaia2016, Gaia2018}. The results are shown in Figure~\ref{astrometry:bck}. In the same figures, we also marked the previous observations \citep{Bailey2013, Wu2016, Lagrange2016, Daemgen2017} to evaluate if the background star was detectable or could contaminate the measurements in those observations.
+
+Figure~\ref{fig:astrometry:bck} demonstrates that HD106906b, due to its proper motion, has been approaching  the background star over the years. The separation between these two object has shrinked from 1\arcsec.29 (2004, first imaging record) to 0\arcsec.87 (this study). In the study of \citep{Bailey2013, Wu2016, Daemgen2017}, the background star had separation of 0.95-1.05 to HD106906b. Given their separations in these studies, it is unclear if the background star contaminated those measurements. Considering the brightness contrast of the two object, in the worst case, the contamination of the background star to HD106906b's broadband photometry is on the order of 7.5\% level.
+
+\subsection{Spectral Energy Distribution}
+Our observation provide the first $1.4\micron$ water absorption band photometry for HD106906b. We include our photometry with the archived data from \citep{Bailey2013,Kalas2015,Wu2016} to constrain the spectral egnergy distribution fitting for HD106906b.
+
+\subsection{The disk around HD106906}
+
 
 \section{Discussion}
 \begin{enumerate}
-\item the variability
-\item SED for HD106906, further determine its spectral type
+\item the variability\\
+  TODO think about light curve analysis. what can be done. What extra information may lie in the data. Think about the constrain on inclination, or taken the possible correlation between modulation and variability amplitude and then use it to constrain the inclination
 \item the limit on the inclination \citep[see][]{Vos2017}
-\item possible astrometry constrains (what about the distortion correction for WFC3)
-\item limit on additional companions
-\item lack of large amplitude detection for planetary mass companions. 
-\end{enumerate}
-For the last point, take the variability occurance rate from \citep{Vos2017,Metchev2015}, test whether the low mass companions' variability occurance rate agree with the low surface gravity field objects
+  
+\item SED for HD106906, further determine its spectral type\\
+  This should be easy, collect all point
+\item possible astrometry constrains (what about the distortion correction for WFC3)\\
+  the measurement should be easy
+\item limit on additional companions\\
+  should be easy
+  \item assessment of modulation amplitude, are companions same as low surface gravity free floating object?
+  % \item lack of large amplitude detection for planetary mass companions.\\
+%   depend on the analysis of the first step
+  \end{enumerate}
 
+% \end{enumerate}
+% For the last point, take the variability occurrence rate from \citep{Vos2017,Metchev2015}, test whether the low mass companions' variability occurrence rate agree with the low surface gravity field objects
 \bibliographystyle{yahapj}
 \bibliography{library}
 
@@ -61,3 +100,5 @@ For the last point, take the variability occurance rate from \citep{Vos2017,Metc
 %%% mode: latex
 %%% TeX-master: t
 %%% End:
+
+% LocalWords:  AAS
