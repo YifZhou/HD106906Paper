@@ -116,12 +116,18 @@ Figure~\ref{fig:astrometry:bck} demonstrates that HD106906b, due to its proper m
 \end{figure}
 
 \subsection{Other sources in the field}
-Our $30\arcsec\times30\arcsec$ field of view is a crowded field that may include yet undiscovered companion of HD106906. The three filters that are used in this observation measure the water absorption depth, which is an effective criterion to select ultra-cool objects. Here we define the water absorption depth as the difference between the F139M flux intensity and the continuum, which is average flux intensity of F127M and F153M. This difference is further normalized by the continuum flux to get the relative water absorption depth. The relative water absorption depth is calculated as the following equation.
+Our $30\arcsec\times30\arcsec$ field of view (Figure \ref{fig:RGBimage}) is a crowded field that may include yet undiscovered companion of HD106906. The three filters that are used in this observation measure the water absorption depth, which is an effective criterion to select ultra-cool objects. Here we define the water absorption depth as the difference between the F139M flux intensity and the continuum, which is average flux intensity of F127M and F153M. This difference is further normalized by the continuum flux to get the relative water absorption depth. The relative water absorption depth is calculated as the following equation.
 \begin{equation}
 D = \frac{(f_{\mathrm{F127M}} + f_\mathrm{F153M})/2 - f_{\mathrm{F139M}}}{(f_{\mathrm{F127M}} + f_\mathrm{{F153M}})/2}
 \end{equation}
 We used the median combined primary subtracted image to measure the relative water absorption depth for 12 point sources (include HD106906b) that are in the field of view for both telescope rolls. Figure~\ref{fig:backgroundsources} shows the water absorption depth for each source. Except HD106906b, there is one source that has significant water absorption depth. Interestingly, this source is the one that is discussed in \S\ref{sec:astrometry}, and also the one that has the smallest angular separation to HD106906b among all sources in the field of view. However, based on the discussion of \S\ref{sec:astrometry}, this source is unlikely to be co-moving with HD106906. Its astrometry is consistent of being a background star.
 
+\begin{figure}
+  \centering
+  \plottwo{figures/HD106906_RGB}{figures/HD106906_RGB_zoomin}  
+  \caption{R (F153M) G (F139M) B (F127M) images of HD106906 (left) and the zoomed-in view of the planet. The PSF of the planet has less green shade compared to background stars due to strong water absorption of HD106906b.}
+  \label{fig:RGBimage}
+\end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth]{figures/bck_waterdepth.pdf}
@@ -138,12 +144,26 @@ We used the median combined primary subtracted image to measure the relative wat
   color dependence, compare with other planetary mass companions
 \item the limit on the inclination \citep[see][]{Vos2017}
   
-\item SED for HD106906. Deviation from BT Settl model. The best-fitting $\log g$ is very high (5.5)
+\item SED of HD106906. Deviation from BT Settl model. The best-fitting $\log g$ is very high (5.5)
 \item possible astrometry constrains (what about the distortion correction for WFC3)\\
 \item limit on additional companions\\
   % \item lack of large amplitude detection for planetary mass companions.\\
 %   depend on the analysis of the first step
-  \end{enumerate}
+\end{enumerate}
+
+\subsection{SED of  HD106906b}
+Two issues have emerged in the SED fitting results. First, the best-fitting model over-predicts the 1.4 \micron{} water absorption band depth. Second, the best-fitting surface gravity is inconsistent with previous low-gravity assessment for HD106906b.
+
+To investigate the first issue, we calculate the water band absorption depths in the BT Settl as functions of $T_{\mathrm{eff}}$ and $\log g$ and compare them with the observed value. As shown in Figure \ref{fig:waterdepth}), for a fixed $T_{\mathrm{eff}}$ of 1800 K, all BT Settl models over-predict the water band depth. For a fixed $\log g$ of 5.5, to match the observed water band depth, $T_{\mathrm{eff}}$ needs to be raised to $2500$ K, although such a high temperature is not at all consistent with the overall SED shape. Therefore, the mismatch between the HD106906b's observed and the model SEDs in the 1.4 \micron{} water bands demonstrates the inadequacy of current state-of-the-art ultra-cool atmospheric models.
+
+\citet{Bailey2013} and \citet{Daemgen2017} have discussed the surface gravity of HD106906b. Both studies classify HD106906b as a low-to-intermediate surface gravity object based on its triangle-shaped $H$ band spectrum. The equivalent widths of the K I absorption lines measured in \citet{Daemgen2017} are also consistent with an intermediate surface gravity classification. In addition, low surface gravity is also consistent with the young and low mass nature of HD106906b. However, our SED fitting yield a very high gravity result. With a fixed $T_{\mathrm{eff}}$ of 1800 K, lower surface gravity models significantly over-predicts the F153M and $K_{\mathrm{s}}$ band flux intensities, therefore they are not preferred by the SED fitting. This inconsistency, again, may show the insufficiency of atmospheric models for planetary-mass ultra-cool objects.
+
+\begin{figure}
+  \centering
+  \plottwo{figures/logg_water}{figures/Teff_water}
+  \caption{1.4 \micron{} water band depths predicted by the BT Settl model. Left: With a fixed $T_{\mathrm{eff}}=1800$ K, models with $\log g$ between 3 to 5.5 all over-predicts the water band depths. Right: With a fixed $\log g=5.5$, it requires $T_{\mathrm{eff}}=2500$ K for the model to match the observation.}
+  \label{fig:waterdepth}
+\end{figure}
 
 % \end{enumerate}
 % For the last point, take the variability occurrence rate from \citep{Vos2017,Metchev2015}, test whether the low mass companions' variability occurrence rate agree with the low surface gravity field objects
