@@ -37,6 +37,7 @@ TBD
 \end{abstract}
 
 \keywords{}
+
 \section{Introduction}
 
 Condensates clouds are central components of the atmospheres of brown dwarfs and exoplanets \citep[e.g.,][]{Morley2012,Marley2013,Marley2015}. Cloud opacity strongly impacts the near-infrared color and spectra of these objects. Therefore, understanding cloud properties is critical to determining  fundamental properties and atmospheric compositions of substellar objects through emission and transmission spectroscopic observations \citep{Ingraham2014, Kreidberg2014a, Stevenson2016, DeWit2016, Samland2017}. Because brown dwarfs are available for direct spectroscopy and their observations are generally less challenging than transmission spectroscopy of transiting exoplanets, cloud properties for brown dwarfs are better constrained than for exoplanets through time-averaged spectroscopic \citep[e.g.,][]{Cushing2008,Stephens2009} and {time-resolved} \citep[e.g.,][]{Buenzli2012,Apai2013,Biller2017,Apai2017} observations. Directly-imaged exoplanets and planetary-mass companions \citep[e.g.,][]{Chauvin2004,Marois2008a,Marois2010,Macintosh2015a}, which overlap with transiting planets in mass and are suitable for high-quality time-series observations, are excellent targets for connecting cloud studies between brown dwarfs and exoplanets.
@@ -62,9 +63,9 @@ HD106906 was also observed by HST/ACS/HRC on 2004-12-01 UTC (PID: 10330, PI: H. 
 
 \subsection{Time-Resolved Photometry}
 \begin{figure*}
-  \centering  \includegraphics[width=0.5\textwidth]{figures/F153M_medianSubtractionMasked_rotation_01}  
-  \includegraphics[width=0.42\textwidth]{figures/HD106906_RGB_composite}  
-  \caption[Direct-imaging observations of the HD106906 system.]{Direct-imaging observations of the HD106906 system. \emph{Left:} An illustration for the 2RDI results. Red color represents signals from the original images and blue colored pixels are structures from the subtraction model images. Regions that are marked by hatches are used for optimizing the subtraction. \emph{Right: An R (F153M) G (F139M) B (F127M) color composite image of HD106906.} Overlaid on the HST RGB composite are the false-color GPI (inner most) and ACS/HRC (outer annulus) scattered light images \citep{Kalas2015} of the circumstellar disk. The circumstellar disk is not visible in the WFC3/IR images.}
+  \centering
+\plottwo{figures/F153M_medianSubtractionMasked_rotation_01}{figures/HD106906_RGB_composite}  
+  \caption{Direct-imaging observations of the HD106906 system. \emph{Left:} An illustration for the 2RDI results. Red color represents signals from the original images and blue colored pixels are structures from the subtraction model images. Regions that are marked by hatches are used for optimizing the subtraction. \emph{Right: An R (F153M) G (F139M) B (F127M) color composite image of HD106906.} Overlaid on the HST RGB composite are the false-color GPI (inner most) and ACS/HRC (outer annulus) scattered light images \citep{Kalas2015} of the circumstellar disk. The circumstellar disk is not visible in the WFC3/IR images.}
   \label{fig:2rdi}
 \end{figure*}
 
@@ -98,31 +99,32 @@ In summary, HD106906b only shows marginal  evidence of variability in the F127M 
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/HD106906_lightcurves.pdf}
-  \caption[HST/WFC3/IR Lightcurves for HD106906b in the F127M, F139M, and F153M bands.]{HST/WFC3/IR Lightcurves for HD106906b in the F127M, F139M, and F153M bands. For clarity,  offsets of 5\% and 10\% are applied to the F139M and F153M lightcurves, respectively.}
+  \plotone{figures/HD106906_lightcurves.pdf}
+  \caption{HST/WFC3/IR Lightcurves for HD106906b in the F127M, F139M, and F153M bands. For clarity,  offsets of 5\% and 10\% are applied to the F139M and F153M lightcurves, respectively.}
   \label{fig:lightcurve}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/HD106906_powerspectrum.pdf} \includegraphics[width=0.7\textwidth]{figures/periodogram_bootstrap}
-  \caption[Lomb-Scargle periodogram for the lightcurves of HD106906b.]{Lomb-Scargle periodogram for the lightcurves of HD106906b. \emph{Upper:} Power spectra for the F127M, F139M, and F153M. \emph{Lower:} Bootstrap uncertainty estimate for the 4.02 hr periodic signal seen in the F127M power spectrum. }
+  \plotone{figures/HD106906_powerspectrum.pdf}
+  \plotone{figures/periodogram_bootstrap}
+  \caption{Lomb-Scargle periodogram for the lightcurves of HD106906b. \emph{Upper:} Power spectra for the F127M, F139M, and F153M. \emph{Lower:} Bootstrap uncertainty estimate for the 4.02 hr periodic signal seen in the F127M power spectrum. }
   \label{fig:periodogram}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/F127M_foldedLC.pdf}
-  \caption[Phase-folded lightcurve in the F127M filter for HD106906b.]{Phase-folded lightcurve for F127M. The lightcurve is folded to a period of 4.02 hr. The period corresponds to the most significant peak in the Lomb Scargle periodogram.}
+  \plotone{figures/F127M_foldedLC.pdf}
+  \caption{Phase-folded lightcurve for F127M. The lightcurve is folded to a period of 4.02 hr. The period corresponds to the most significant peak in the Lomb Scargle periodogram.}
   \label{fig:fold}
 \end{figure}
 
-\begin{figure*}[!ht]
+\begin{figure}[!ht]
   \centering
     \plotone{figures/all-LSs}
-  \caption[Comparison of the periodograms between those for background stars and those for HD106906b.]{Comparison of the periodograms between those for background stars and those for HD106906b. The two background star periodograms (background star 4 in the F127M band and background star 5 in the F139M band) that show similar signals to HD109606b's do not show variations in the folded lightcurves.}
+  \caption{Comparison of the periodograms between those for background stars and those for HD106906b. The two background star periodograms (background star 4 in the F127M band and background star 5 in the F139M band) that show similar signals to HD109606b's do not show variations in the folded lightcurves.}
   \label{fig:all-periodograms}
-\end{figure*}
+\end{figure}
 
 
 \subsection{Spectral Energy Distribution}
@@ -132,8 +134,8 @@ We fit the SED of HD106906b to the BT Settl model \citep[][]{Allard2012} and sho
 
 \begin{figure*}
   \centering
-\includegraphics[width=0.7\textwidth]{figures/SEDfit.pdf}  \includegraphics[width=0.65\textwidth]{figures/SEDfit_zoomin.pdf}
-  \caption[The SED of HD106906 and the best-fitting BT Settl model.]{The SED of HD106906 and the best-fitting BT Settl model. The upper panel shows the full observed SED (blue) that includes photometry from both this observation and archival data. The red line is the best-fitting (1800~K, $\log g=5.5$) BT Settl spectrum \citep[rebinned to $R\sim100$ in a flux conserved manner, ][]{Allard2012}. The red dots are the model photometry that are from a model spectrum integrated with the filter throughput curves. The lower panel zooms in the wavelength range of this observation. The orange violin plot shows the best-fitting model distributions, which are drawn from the MCMC fitting posteriors. The flux in the F139M band is significantly under-predicted by the BT Settl model.}
+\plottwo{figures/SEDfit.pdf}{figures/SEDfit_zoomin.pdf}
+  \caption{The SED of HD106906 and the best-fitting BT Settl model. The upper panel shows the full observed SED (blue) that includes photometry from both this observation and archival data. The red line is the best-fitting (1800~K, $\log g=5.5$) BT Settl spectrum \citep[rebinned to $R\sim100$ in a flux conserved manner, ][]{Allard2012}. The red dots are the model photometry that are from a model spectrum integrated with the filter throughput curves. The lower panel zooms in the wavelength range of this observation. The orange violin plot shows the best-fitting model distributions, which are drawn from the MCMC fitting posteriors. The flux in the F139M band is significantly under-predicted by the BT Settl model.}
   \label{fig:SED}
 \end{figure*}
 
@@ -144,8 +146,8 @@ In order to establish a precise astrometric reference frame and constrain the re
 
 We derive the separations and position angles between HD106906A and b and their uncertainties for the 2016 and 2018 epochs. The separations are $7.11\pm0.03$ and $7.108\pm0.005$ in the 2016 and 2018 epochs, respectively. The position angles are $307.5^{\circ}\pm0.3^{\circ}$ and $307.29\pm0.05^{{\circ}}$ in the two epochs, respectively. These separations and position angles are indistinguishable from those measured in the ACS/HRC images \citep{Bailey2013}. Therefore, relative motions between the companion and the star are not detected. The substantial positional uncertainty of HD106906A due to saturation is the bottleneck that limits the astrometric value of these HST images (see \S\ref{sec:HD106906:astrometry-discussion}).
 
- \begin{deluxetable}{llclc}
-  \tablenum{1}
+\begin{deluxetable}{llclc}
+  
   \tablecaption{HST/WFC3 Astrometry for HD106906 System.\label{tab:astrometry}}
   
   \tablehead{
@@ -180,7 +182,7 @@ In all three bands, we calculate the $5\sigma$ contrast curves for contrast-limi
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/contrast_curve.pdf}
+  \plotone{figures/contrast_curve.pdf}
   \caption{Azimuthally averaged contrast curves in F127M, F139M, and F153M for the HD106906 observations.}
   \label{fig:contrast_curve}
 \end{figure}
@@ -189,8 +191,8 @@ We used the median-combined primary-subtracted image to measure the relative wat
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/bck_waterdepth.pdf}
-  \caption[Measured relative water absorption depths of 20 sources in the field of view for the WFC3 observations of HD106906b.]{Measured relative water absorption depths of 20 sources in the field of view. The sources are ranked by their angular distance to HD106906A. Except HD106906b, there are two sources (BG09 and BG19) have water absorptions, but at much weaker levels.}
+  \plotone{figures/bck_waterdepth.pdf}
+  \caption{Measured relative water absorption depths of 20 sources in the field of view. The sources are ranked by their angular distance to HD106906A. Except HD106906b, there are two sources (BG09 and BG19) have water absorptions, but at much weaker levels.}
   \label{fig:backgroundsources}
 \end{figure}
 
@@ -200,8 +202,8 @@ Figure~\ref{fig:astrometry:bck} demonstrates that HD106906b, due to its proper m
 
 \begin{figure*}[!ht]
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/bckStarDeltaRADEC.pdf} \includegraphics[width=0.7\textwidth]{figures/bckStarSeparation.pdf}
-  \caption[Relative astrometry between HD106906b and a background star seen close in projection.]{Relative astrometry between HD106906b and a background star seen close in projection. Top: The difference in right ascension and declination. Bottom: The separation as a function of time. Past observations of HD106906b are marked as squares.}
+  \plottwo{figures/bckStarDeltaRADEC.pdf}{figures/bckStarSeparation.pdf}
+  \caption{Relative astrometry between HD106906b and a background star seen close in projection. Top: The difference in right ascension and declination. Bottom: The separation as a function of time. Past observations of HD106906b are marked as squares.}
   \label{fig:astrometry:bck}
 \end{figure*}
 
@@ -234,12 +236,12 @@ This prediction can be tested by $v\sin i$ measurements from high-resolution spe
 
  The surface gravity of HD106906b has been discussed in \citet{Bailey2013} and \citet{Daemgen2017}.  Based on its ``triangle-shaped'' $H$ band spectrum, both studies classified HD106906b as a low-to-intermediate surface gravity ($\logg\sim4\mbox{-}4.5$) object. The equivalent widths of the K I absorption lines measured in \citet{Daemgen2017} are also consistent with an intermediate surface gravity classification. In addition, low surface gravity is also consistent with the young and low mass nature of HD106906b. However, our SED fitting yields a very high gravity ($\logg=5.5$) result. With a fixed $T_{\mathrm{eff}}$ of 1800 K, the lower surface gravity models significantly over-predict the F153M and $K_{\mathrm{s}}$ band flux {densities}. Therefore they are not preferred by the SED fitting. This inconsistency demonstrates the challenges posed by young, planetary-mass ultracool atmospheres.
 
-\begin{figure}
+\begin{figure*}
   \centering
   \plottwo{figures/logg_water.pdf}{figures/Teff_water.pdf}
-  \caption[Comparison of 1.4 \micron{} water band depths between observations of HD106906b and the  predictions of the BT Settl model.]{1.4 \micron{} water band depths predicted by the BT Settl model. Left: With a fixed $T_{\mathrm{eff}}=1800$ K, models with $\log g$ between 3 to 5.5 all over-predicts the water band depths. Right: With a fixed $\log g=5.5$, it requires $T_{\mathrm{eff}}=2500$ K for the model to match the observation.}
+  \caption{1.4 \micron{} water band depths predicted by the BT Settl model. Left: With a fixed $T_{\mathrm{eff}}=1800$ K, models with $\log g$ between 3 to 5.5 all over-predicts the water band depths. Right: With a fixed $\log g=5.5$, it requires $T_{\mathrm{eff}}=2500$ K for the model to match the observation.}
   \label{fig:waterdepth}
-\end{figure}
+\end{figure*}
 
 \subsection{Astrometric Constraints on the  HD106906 System}
 \label{sec:HD106906:astrometry-discussion}
@@ -276,47 +278,48 @@ The sky locations for background sources are illustrated in Figure \ref{fig:bck}
 \end{figure}
 
 
-% \begin{deluxetable*}{cccccc}
-%   \tablenum{2}
-%   \tablecaption{Background Sources in the Field of View\label{tab:bck}}
+\begin{deluxetable*}{cccccc}
   
-%   \tablehead{
-%     \colhead{Source ID} &
-%     \colhead{RA} &
-%     \colhead{Dec} &
-%     \colhead{Flux$_{\mathrm{F127M}}$} &
-%     \colhead{Flux$_{\mathrm{F139M}}$} &
-%     \colhead{Flux$_{\mathrm{F153M}}$} \\
-%     \colhead{} &
-%     \colhead{hh mm ss} &
-%     \colhead{dd mm ss} &
-%     \colhead{\fluxunit} &
-%     \colhead{\fluxunit} &
-%     \colhead{\fluxunit} 
-%   }
-%   \startdata
-% BG01 & 12 17 53.4888 & -55 58 13.6500 & 1.91e-17 & 1.68e-17 & 1.49e-17 \\
-% BG02 & 12 17 53.3336 & -55 58 18.7430 & 1.76e-17 & 1.58e-17 & 1.33e-17 \\
-% BG03 & 12 17 53.2894 & -55 58 19.4400 & 3.43e-18 & 3.22e-18 & 2.93e-18 \\
-% BG04 & 12 17 53.5828 & -55 58 18.5440 & 3.48e-18 & 3.25e-18 & 2.83e-18 \\
-% BG05 & 12 17 52.8349 & -55 58 17.0570 & 1.12e-17 & 9.91e-18 & 8.39e-18 \\
-% BG06 & 12 17 52.1945 & -55 58 23.9900 & 2.96e-17 & 2.62e-17 & 2.22e-17 \\
-% BG07 & 12 17 52.4532 & -55 58 23.5060 & 5.58e-18 & 4.93e-18 & 4.24e-18 \\
-% BG08 & 12 17 52.5344 & -55 58 25.2920 & 1.11e-17 & 9.68e-18 & 8.70e-18 \\
-% BG09 & 12 17 52.4036 & -55 58 28.6550 & 4.22e-18 & 3.35e-18 & 3.37e-18 \\
-% BG10 & 12 17 51.0839 & -55 58 32.8790 & 2.72e-16 & 2.44e-16 & 2.08e-16 \\
-% BG11 & 12 17 54.3210 & -55 58 26.2290 & 2.94e-18 & 2.61e-18 & 2.46e-18 \\
-% BG12 & 12 17 53.2405 & -55 58 13.4710 & 2.66e-18 & 2.39e-18 & 2.21e-18 \\
-% BG13 & 12 17 52.3609 & -55 58 16.4220 & 2.11e-18 & 1.84e-18 & 1.71e-18 \\
-% BG14 & 12 17 51.9528 & -55 58 16.2300 & 1.70e-18 & 1.53e-18 & 1.41e-18 \\
-% BG15 & 12 17 52.1558 & -55 58 19.3130 & 1.17e-18 & 1.05e-18 & 8.63e-19 \\
-% BG16 & 12 17 51.6896 & -55 58 30.8770 & 8.44e-18 & 7.23e-18 & 6.33e-18 \\
-% BG17 & 12 17 51.8690 & -55 58 30.5800 & 1.04e-18 & 1.04e-18 & 9.03e-19 \\
-% BG18 & 12 17 51.5059 & -55 58 32.1210 & 7.17e-19 & 6.32e-19 & 5.02e-19 \\
-% BG19 & 12 17 53.2804 & -55 58 25.8250 & 5.48e-18 & 4.02e-18 & 3.26e-18 \\
-% BG20 & 12 17 52.5365 & -55 58 11.7060 & 1.36e-16 & 1.20e-16 & 1.05e-16 
-%   \enddata
-% \end{deluxetable*}
+  \tablecaption{Background Sources in the Field of View\label{tab:bck}}
+  
+  \tablehead{
+    \colhead{Source ID} &
+    \colhead{RA} &
+    \colhead{Dec} &
+    \colhead{Flux$_{\mathrm{F127M}}$} &
+    \colhead{Flux$_{\mathrm{F139M}}$} &
+    \colhead{Flux$_{\mathrm{F153M}}$} \\
+    \colhead{} &
+    \colhead{hh mm ss} &
+    \colhead{dd mm ss} &
+    \colhead{\fluxunit} &
+    \colhead{\fluxunit} &
+    \colhead{\fluxunit} 
+  }
+  
+  \startdata
+BG01 & 12 17 53.4888 & -55 58 13.6500 & 1.91e-17 & 1.68e-17 & 1.49e-17 \\
+BG02 & 12 17 53.3336 & -55 58 18.7430 & 1.76e-17 & 1.58e-17 & 1.33e-17 \\
+BG03 & 12 17 53.2894 & -55 58 19.4400 & 3.43e-18 & 3.22e-18 & 2.93e-18 \\
+BG04 & 12 17 53.5828 & -55 58 18.5440 & 3.48e-18 & 3.25e-18 & 2.83e-18 \\
+BG05 & 12 17 52.8349 & -55 58 17.0570 & 1.12e-17 & 9.91e-18 & 8.39e-18 \\
+BG06 & 12 17 52.1945 & -55 58 23.9900 & 2.96e-17 & 2.62e-17 & 2.22e-17 \\
+BG07 & 12 17 52.4532 & -55 58 23.5060 & 5.58e-18 & 4.93e-18 & 4.24e-18 \\
+BG08 & 12 17 52.5344 & -55 58 25.2920 & 1.11e-17 & 9.68e-18 & 8.70e-18 \\
+BG09 & 12 17 52.4036 & -55 58 28.6550 & 4.22e-18 & 3.35e-18 & 3.37e-18 \\
+BG10 & 12 17 51.0839 & -55 58 32.8790 & 2.72e-16 & 2.44e-16 & 2.08e-16 \\
+BG11 & 12 17 54.3210 & -55 58 26.2290 & 2.94e-18 & 2.61e-18 & 2.46e-18 \\
+BG12 & 12 17 53.2405 & -55 58 13.4710 & 2.66e-18 & 2.39e-18 & 2.21e-18 \\
+BG13 & 12 17 52.3609 & -55 58 16.4220 & 2.11e-18 & 1.84e-18 & 1.71e-18 \\
+BG14 & 12 17 51.9528 & -55 58 16.2300 & 1.70e-18 & 1.53e-18 & 1.41e-18 \\
+BG15 & 12 17 52.1558 & -55 58 19.3130 & 1.17e-18 & 1.05e-18 & 8.63e-19 \\
+BG16 & 12 17 51.6896 & -55 58 30.8770 & 8.44e-18 & 7.23e-18 & 6.33e-18 \\
+BG17 & 12 17 51.8690 & -55 58 30.5800 & 1.04e-18 & 1.04e-18 & 9.03e-19 \\
+BG18 & 12 17 51.5059 & -55 58 32.1210 & 7.17e-19 & 6.32e-19 & 5.02e-19 \\
+BG19 & 12 17 53.2804 & -55 58 25.8250 & 5.48e-18 & 4.02e-18 & 3.26e-18 \\
+BG20 & 12 17 52.5365 & -55 58 11.7060 & 1.36e-16 & 1.20e-16 & 1.05e-16 
+  \enddata
+\end{deluxetable*}
 
 \bibliographystyle{yahapj}
 \bibliography{library}
